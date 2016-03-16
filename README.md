@@ -14,7 +14,6 @@ foreman start
 
 Command line:
 ```sh
-bundle
 export $(cat .env | xargs)
 ruby rest_tour_test
 ```
@@ -22,11 +21,12 @@ ruby rest_tour_test
 ## Configuration and local environment variables
 If you are running with foreman, you will need to create ".env" file in the same folder you have your app's Procfile defining the following variables:
 
-- WEWORK_LOGIN_URL="test.salesforce.com"
-- WEWORK_SF_USERNAME="sf_username@domain"
-- WEWORK_SF_PASSWORD="sf_password"
-- WEWORK_SF_TOKEN="sf_token"
-- WEWORK_SF_CLIENT_ID="connected app id"
-- WEWORK_SF_CLIENT_SECRET="connected app secret"
+- LOGIN_URL="test.salesforce.com"
+- SF_USERNAME="sf_username@domain"
+- SF_PASSWORD="sf_password"
+- SF_TOKEN="sf_token"
+- SF_CLIENT_ID="connected app id"
+- SF_CLIENT_SECRET="connected app secret"
 
 If you don't have an ".env" file, please make sure the above configurations are defined as environment variables.
+
