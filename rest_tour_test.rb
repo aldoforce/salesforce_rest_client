@@ -1,11 +1,11 @@
 require 'restforce'
 
-client = Restforce.new :host => ENV['WEWORK_LOGIN_URL'],
-	:username 			=> ENV['WEWORK_SF_USERNAME'],
-  :password       => ENV['WEWORK_SF_PASSWORD'],
-  :security_token => ENV['WEWORK_SF_TOKEN'],
-  :client_id      => ENV['WEWORK_SF_CLIENT_ID'], #this will be different in production
-  :client_secret  => ENV['WEWORK_SF_CLIENT_SECRET'] #this will be different in production
+client = Restforce.new :host => ENV['LOGIN_URL'],
+	:username 			=> ENV['SF_USERNAME'],
+  :password       => ENV['SF_PASSWORD'],
+  :security_token => ENV['SF_TOKEN'],
+  :client_id      => ENV['SF_CLIENT_ID'], #this will be different in production
+  :client_secret  => ENV['SF_CLIENT_SECRET'] #this will be different in production
   
 
 result = client.post '/services/apexrest/Tour' do |req|
